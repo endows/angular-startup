@@ -7,6 +7,15 @@ styl = require("gulp-stylus")
 gulpif = require("gulp-if")
 plumber = require("gulp-plumber")
 bower = require("main-bower-files")
+karma = require('karma')
+
+gulp.task 'karma:run',(done)->
+  karma.server.start
+    configFile: __dirname + '/karma.conf.coffee'
+    singleRun: true
+  ,->
+    done()
+
 gulp.task "bower", ->
   gulp.src(bower()).pipe(gulpif(/[.]js$/, concat("lib.js"))).pipe(gulpif(/[.]css$/, concat("lib.css"))).pipe gulp.dest("public/")
   return
