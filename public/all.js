@@ -1,4 +1,4 @@
 (function() {
-  console.log("This is app.coffeeeeeeeeeeeeeeeeeeeeeeee");
+  angular.module('myApp', []);
 
 }).call(this);
