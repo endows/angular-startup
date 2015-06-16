@@ -6,6 +6,7 @@ angularアプリを作る際の雛形です。angular + coffee + jade + styl + l
 git clone https://github.com/endows/angular-startup <myApp>
 cd myApp
 npm install
+bower install
 gulp
 # http://localhost:8000
 ```
